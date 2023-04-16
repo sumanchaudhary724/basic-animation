@@ -1,0 +1,72 @@
+.container {
+  background: blue;
+  width: 80%;
+  margin: auto;
+  height: 80vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.parent {
+  background: black;
+  width: 400px;
+  height: 400px;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 2s linear infinite reverse;
+}
+
+h2 {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ball {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(white, red 70%);
+  left: 40px;
+  top: 40px;
+  position: absolute;
+  animation: circle 1s infinite;
+}
+
+@keyframes circle {
+  0% {
+    left: 40px;
+    top: 40px;
+  }
+  25% {
+    left: 80%;
+    top: 40px;
+  }
+  50% {
+    left: 80%;
+    top: 70vh;
+    background: radial-gradient(white, yellow);
+  }
+  75% {
+    left: 40px;
+    top: 70vh;
+  }
+
+  100% {
+    left: 40px;
+    top: 40px;
+  }
+}
